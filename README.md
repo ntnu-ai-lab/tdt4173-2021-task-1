@@ -7,7 +7,11 @@ This repository contains all resources for Homework 1 of TDT4173 fall 2021.
 
 ## Setup 
 
-Below follows instructions for getting started.
+Below follows instructions for getting started. Last year we got a mix of students with all sorts of backgrounds, so we will try to give a detailed set of installation instructions in the sections below.
+
+**TL;DR** for those who are familiar with python and git 
+- Python >= 3.6 
+- Dependences in [requirements.txt](requirements.txt)
 
 ### Dowloading the project 
 
@@ -25,11 +29,43 @@ The boilerplate code provided here was designed with **Python 3.6 or higher** in
 
 Once you have Python 3.6 or higher up and running, you need to install additional python packages. The main ones used are `jupyter`, `numpy`, `pandas`, `matplotlib`, and `seaborn`. However, an exahstive list of the exact packages and the
 
+For all the commands mentioned below, it is assumed that the current working directory of your shell is the root folder of this repository (wherever you cloned/downloaded it to). You can change the current working directory in your terminal with:
+
+```
+cd /path/to/project  # Linux / MacOS 
+cd \path\to\project  # Windows
+```
+
 #### Installation with Virtualenv + pip
+
+One of the most common ways to install python packages is with the pip package manager. There are several ways to install it. If you're on Linux, then just use your normal (system) package manager. If you use Homebrew on MacOS, then it can be installed from there. Alternatively, you can [install it using python](https://pip.pypa.io/en/stable/installation/) on all platforms.
+
+When using pip, it is also good practice to install package not on a global/system level, but in "virtual environments" organized for each of your projects. The [virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) package helps you do this and can be installed through pip:
+
+```
+# Install only the virtualenv pacakge globally
+python -m pip install --user virtualenv   # ("py -m pip ..." on windows)
+# Create and activate a virtual environment with an appropriate python version 
+virtualenv --python python3.6 venv  # (or another python version >= 3.6 that you have installed)
+source venv/bin/actiate  # (".\venv\Scripts\activate" on windows)
+```
+
+This will create a virtual environment in a folder called `venv` that is located in the folder you executed the commands from. All subsequent python packages installed with pip should end up within this folder structure (and not in the global package folder). If you want to scrap all the packages associated with your project later, you can just delete this folder while not having to worry about breaking other projects. It also solves the problem of having to deal with different projects requireing different versions of the same pacakge. After having created and activated your new virtual environment, all the packages required for this project can be installed with:
+
+```
+python -m pip -r requirements.txt  # ("py -m pip ..." on windows)
+```
+
 
 #### Installation with Anaconda 
 
-If you use anacoda to manage your python versions and packages, the 
+If you use [Anaconda](https://www.anaconda.com/products/individual) to manage your python versions and packages, then you can create a new python environment and install all the dependencies with the following commands.
+
+```
+conda create --name tdt4173 python=3.6   # (or another python version >= 3.6)
+source activate tdt4173  # (just "activate tdt4173" on windows)
+conda install --yes --file requirements.txt
+```
 
 ### Running a Notebook Servier
 
