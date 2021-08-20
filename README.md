@@ -29,7 +29,7 @@ The boilerplate code provided here was designed with **Python 3.6 or higher** in
 
 Once you have Python 3.6 or higher up and running, you need to install additional python packages. The main ones used are `jupyter`, `numpy`, `pandas`, `matplotlib`, and `seaborn`. However, an exahstive list of the exact packages and the
 
-For all the commands mentioned below, it is assumed that the current working directory of your shell is the root folder of this repository (wherever you cloned/downloaded it to). You can change the current working directory in your terminal with:
+**NOTE:** For all the commands mentioned below, it is assumed that the current working directory of your shell is the root folder of this repository (wherever you cloned/downloaded it to). You can change the current working directory in your terminal with:
 
 ```
 cd /path/to/project  # Linux / MacOS 
@@ -67,6 +67,17 @@ source activate tdt4173  # (just "activate tdt4173" on windows)
 conda install --yes --file requirements.txt
 ```
 
-### Running a Notebook Servier
+### Running a Notebook Server
+
+After you have installed all the dependencies, you can run a notebook server with:
+
+```
+jupyter lab
+```
+
+This will start a slightly fancier version of [jupyter notebook](https://jupyter.org). It is a single-page application that allows you to navigate, edit, and run python and jupyter notebook files from your browser. By default the server should be exposed at `localhost` port `8888`. If you're running this command from your laptop or desktop computer, it should automatically open in your default web browser. If for some reason not, try manually navigating to `localhost:8888` in your web browser (or copy the full URL from the logging output in the shell you ran the command). If it asks for a password or token, this can also be found in the shell output.
+
+From here, you can start running and editing the files in the project. If you need more help with the interface, there are several [guides online](https://www.youtube.com/watch?v=7wfPqAyYADY).
+
 
 
