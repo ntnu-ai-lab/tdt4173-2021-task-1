@@ -46,7 +46,7 @@ Below follows instructions for getting started. Last year we got a mix of studen
 
 ### Dowloading the project 
 
-For those of you familiar with git, all you need to do is clone this repository. If you do not have git, it can be [freely downloaded](https://git-scm.com/downloads) and installed on all major platforms.
+For those of you familiar with git, all you need to do is clone this repository. If you do not have git, it can be [freely downloaded](https://git-scm.com/downloads) and installed on all major platforms. Once you have it, you can clone this repository by executing:
 
 ```
 git clone git@github.com:ntnu-ai-lab/tdt4173-2021-task-1.git
