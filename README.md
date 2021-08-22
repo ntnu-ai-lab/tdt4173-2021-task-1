@@ -2,7 +2,38 @@
 
 This repository contains all resources for Homework 1 of TDT4173 fall 2021.
 
-## Problem Overview
+## Problem Description
+
+In this assignment you will be developing well-known and simple (but occasionally very useful) machine learning algorithms. The interface you are asked to implement strongly resembles the one used in [Scikit Learn]( https://scikit-learn.org/stable/). However, you are not allowed to use this library (or any other third-party solutions). Instead, you will implement the algorithms from scratch, using only basic tools like numpy.
+
+### Overview
+- You are presented with three common machine learning algorithms; K-Means, Decision Tree, and Logistic Regression.
+- All material for each algorithm can be found in its own self-contained folder.
+- The <algorithm_name>.py files (e.g. k_means.py) contains skeleton code for an sklearn-style implementation.
+- For each algorithm, there are two datasets that you are asked to solve. 
+  - The data_1.csv files contain very easy problems that can be used to debug your implementation of the algorithm.
+  - The data_2.csv files contain slightly harder problems that require you to tweak your machine learning pipeline for good results.
+- The experiment.ipynb files are jupyter notebooks with additional instructions/tips, as well as code for loading the datasets, training, and evaluating the models. You should be able to run them once the algorithm files are implemented. They also contain reference values for decent performance on all the problems. 
+
+### Your task concretely
+- Pick at least two out of the three algorithms presented.
+- Implement the selected algorithms by filling out the methods marked with `TODO` in the <algorithm_name>.py files. Add any extra helping functions and constructor arguments as you see fit.
+  - Use only numpy, pandas, and the python standard libraries for this.
+- Run the cells in the “experiment.ipynb” notebooks to verify that things works as it should. Feel free to make changes to the code in the notebook too.
+  - Make sure that your results match (or exceed) the reference values.
+- Write up a short report (max 2 pages) with your results, plots, and a description of your work. For each algorithm, we look for answers to the following questions:
+  - How does the algorithm work on a technical level?
+  - What is its inductive bias, i.e., what assumptions does it make about the data in order to generalize?
+  - What happens in the second dataset that makes it harder than the first and how does this problem relate to the algorithm’s inductive bias?
+  - What modifications did you do to get around this problem?
+
+
+### Submission and Evaluation
+- Submit your report and code to Blackboard. The code can be submitted as a zip-file with your report, or by linking to your own version/fork of this github repository.
+  - If zip: Make sure you only submit (your modified versions of) the files currently present in this repository (i.e. no pip packages etc.)
+  - If git: Make sure your repository is public and provide a link to it at the top of your report.
+- The deadline for submission is September 17th.
+- Your submission is evaluated on a pass/fail basis, but passing it is a requirement for passing the course.
 
 
 ## Setup 
