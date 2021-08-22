@@ -22,7 +22,7 @@ In this assignment you will be developing well-known and simple (but occasionall
 - Run the cells in the “experiment.ipynb” notebooks to verify that things works as it should. Feel free to make changes to the code in the notebook too.
   - Make sure that your results match (or exceed) the reference values.
 - Write up a short report (max 2 pages) with your results, plots, and a description of your work. For each algorithm, we look for answers to the following questions:
-  - How does the algorithm work on a technical level?
+  - How does the algorithm work on a technical level and what kind of machine learning problems is it suited for?
   - What is its inductive bias, i.e., what assumptions does it make about the data in order to generalize?
   - What happens in the second dataset that makes it harder than the first and how does this problem relate to the algorithm’s inductive bias?
   - What modifications did you do to get around this problem?
