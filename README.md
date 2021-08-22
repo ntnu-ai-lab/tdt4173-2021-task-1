@@ -58,7 +58,7 @@ This shell command will clone the repository to your local computer. You will be
 
 The boilerplate code provided here was designed with **Python 3.6 or higher** in mind. In particular, it uses [f-strings](https://realpython.com/python-f-strings/) pretty liberally, which will crash for earlier versions of python. If you don't have Python 3.6+, it can be [freely downloaded](https://www.python.org/downloads/) and installed on all major platforms too.
 
-Once you have Python 3.6 or higher up and running, you need to install additional python packages. The main ones used are `jupyter`, `numpy`, `pandas`, `matplotlib`, and `seaborn`. However, an exahstive list of the exact packages and the
+Once you have Python 3.6 or higher up and running, you need to install additional python packages. The main ones used are `jupyter`, `numpy`, `pandas`, `matplotlib`, and `seaborn`. However, an exahstive list of the exact packages and versions used by the authors of this assignment can be found in [requirements.txt](./requirements.txt).
 
 **NOTE:** For all the commands mentioned below, it is assumed that the current working directory of your shell is the root folder of this repository (wherever you cloned/downloaded it to). You can change the current working directory in your terminal with:
 
