@@ -29,9 +29,8 @@ In this assignment you will be developing well-known and simple (but occasionall
 
 
 ### Submission and Evaluation
-- Submit your report and code to Blackboard. The code can be submitted as a zip-file with your report, or by linking to your own version/fork of this github repository.
-  - If zip: Make sure you only submit (your modified versions of) the files currently present in this repository (i.e. no pip packages etc.)
-  - If git: Make sure your repository is public and provide a link to it at the top of your report.
+- Submit your report and code to Blackboard.
+  - The code should be a zip file and only contain (your modified versions of) the files currently present in this repository (i.e. no pip packages etc.).
 - The deadline for submission is September 17th.
 - Your submission is evaluated on a pass/fail basis, but passing it is a requirement for passing the course.
 
