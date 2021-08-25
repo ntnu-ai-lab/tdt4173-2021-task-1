@@ -85,7 +85,7 @@ source venv/bin/actiate  # (".\venv\Scripts\activate" on windows)
 This will create a virtual environment in a folder called `venv` that is located in the folder you executed the commands from. All subsequent python packages installed with pip should end up within this folder structure (and not in the global package folder). If you want to scrap all the packages associated with your project later, you can just delete this folder while not having to worry about breaking other projects. It also solves the problem of having to deal with different projects requireing different versions of the same pacakge. After having created and activated your new virtual environment, all the packages required for this project can be installed with:
 
 ```
-python -m pip -r requirements.txt  # ("py -m pip ..." on windows)
+python -m pip install -r requirements.txt  # ("py -m pip ..." on windows)
 ```
 
 
