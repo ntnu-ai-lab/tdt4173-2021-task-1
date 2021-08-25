@@ -79,7 +79,7 @@ When using pip, it is also good practice to install package not on a global/syst
 python -m pip install --user virtualenv   # ("py -m pip ..." on windows)
 # Create and activate a virtual environment with an appropriate python version 
 virtualenv --python python3.6 venv  # (or another python version >= 3.6 that you have installed)
-source venv/bin/actiate  # (".\venv\Scripts\activate" on windows)
+source venv/bin/activate  # (".\venv\Scripts\activate" on windows)
 ```
 
 This will create a virtual environment in a folder called `venv` that is located in the folder you executed the commands from. All subsequent python packages installed with pip should end up within this folder structure (and not in the global package folder). If you want to scrap all the packages associated with your project later, you can just delete this folder while not having to worry about breaking other projects. It also solves the problem of having to deal with different projects requireing different versions of the same pacakge. After having created and activated your new virtual environment, all the packages required for this project can be installed with:
