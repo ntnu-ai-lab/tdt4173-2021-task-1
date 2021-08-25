@@ -6,7 +6,7 @@ import pandas as pd
 
 class KMeans:
     
-    def __init__():
+    def __init__(self):
         # NOTE: Feel free add any hyperparameters 
         # (with defaults) as you see fit
         pass
@@ -20,7 +20,7 @@ class KMeans:
                 m rows (#samples) and n columns (#features)
         """
         # TODO: Implement
-        raise NotImplemented()
+        raise NotImplementedError()
     
     def predict(self, X):
         """
@@ -39,7 +39,7 @@ class KMeans:
             could be: array([2, 0, 0, 1, 2, 1, 1, 0, 2, 2])
         """
         # TODO: Implement 
-        raise NotImplemented()
+        raise NotImplementedError()
     
     def get_centroids(self):
         """
@@ -56,38 +56,13 @@ class KMeans:
             [xm_1, xm_2, ..., xm_n]
         ])
         """
-        pass
+        # TODO: Implement 
+        raise NotImplementedError()
     
     
     
     
 # --- Some utility functions 
-
-def euclidean_distance(x, y):
-    """
-    Computes euclidean distance between two sets of points 
-    
-    Note: by passing "y=0.0", it will compute the euclidean norm
-    
-    Args:
-        x, y (array<...,n>): float tensors with pairs of 
-            n-dimensional points 
-            
-    Returns:
-        A float array of shape <...> with the pairwise distances
-        of each x and y point
-    """
-    return np.linalg.norm(x - y, ord=2, axis=-1)
-
-def cross_euclidean_distance(x, y=None):
-    """
-    
-    
-    """
-    y = x if y is None else y 
-    assert len(x.shape) >= 2
-    assert len(y.shape) >= 2
-    return euclidean_distance(x[..., :, None, :], y[..., None, :, :])
 
 
 def euclidean_distortion(X, z):
@@ -107,13 +82,47 @@ def euclidean_distortion(X, z):
     assert X.shape[0] == z.shape[0]
     
     distortion = 0.0
-    clusters = np.unique(z)
-    for i, c in enumerate(clusters):
+    for c in np.unique(z):
         Xc = X[z == c]
         mu = Xc.mean(axis=0)
-        distortion += ((Xc - mu) ** 2).sum(axis=1)
+        distortion += ((Xc - mu) ** 2).sum()
         
     return distortion
+
+def euclidean_distance(x, y):
+    """
+    Computes euclidean distance between two sets of points 
+    
+    Note: by passing "y=0.0", it will compute the euclidean norm
+    
+    Args:
+        x, y (array<...,n>): float tensors with pairs of 
+            n-dimensional points 
+            
+    Returns:
+        A float array of shape <...> with the pairwise distances
+        of each x and y point
+    """
+    return np.linalg.norm(x - y, ord=2, axis=-1)
+
+def cross_euclidean_distance(x, y=None):
+    """
+    Compute Euclidean distance between two sets of points 
+    
+    Args:
+        x (array<m,d>): float tensor with pairs of 
+            n-dimensional points. 
+        y (array<n,d>): float tensor with pairs of 
+            n-dimensional points. Uses y=x if y is not given.
+            
+    Returns:
+        A float array of shape <m,n> with the euclidean distances
+        from all the points in x to all the points in y
+    """
+    y = x if y is None else y 
+    assert len(x.shape) >= 2
+    assert len(y.shape) >= 2
+    return euclidean_distance(x[..., :, None, :], y[..., None, :, :])
 
 
 def euclidean_silhouette(X, z):
@@ -154,4 +163,3 @@ def euclidean_silhouette(X, z):
     b = (D + inf_mask).min(axis=1)
     
     return np.mean((b - a) / np.maximum(a, b))
-  
