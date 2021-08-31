@@ -6,7 +6,7 @@ import pandas as pd
 
 class DecisionTree:
     
-    def __init__():
+    def __init__(self):
         # NOTE: Feel free add any hyperparameters 
         # (with defaults) as you see fit
         pass
