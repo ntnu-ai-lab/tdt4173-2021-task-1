@@ -53,6 +53,12 @@ For those of you familiar with git, all you need to do is clone this repository.
 git clone git@github.com:ntnu-ai-lab/tdt4173-2021-task-1.git
 ```
 
+If that doesn't work, try to clone with HTTPS using the following command
+
+```
+git clone https://github.com/ntnu-ai-lab/tdt4173-2021-task-1.git
+```
+
 This shell command will clone the repository to your local computer. You will be able to find it in the folder you executed the command from. If you don't want to bother with git, just click the green `Code` button in the top right corner of the repository and select the `Download ZIP` option from the dropdown.
 
 ### Installing Dependencies 
