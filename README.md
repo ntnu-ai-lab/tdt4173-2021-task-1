@@ -105,6 +105,14 @@ source activate tdt4173  # (just "activate tdt4173" on windows)
 conda install --yes --file requirements.txt
 ```
 
+If the `conda install ...` command doesn't work, it might be because the requirements file was generated from a pip installation. The following command installs just the essential packages manually and has been shown to work as an alternative for some students:
+
+```
+conda install -y -c conda-forge numpy=1.20.2 pandas=1.3.2 matplotlib=3.3.4 jupyterlab=3.1.9 seaborn=0.11.2
+```
+
+
+
 ### Running a Notebook Server
 
 After you have installed all the dependencies, you can run a notebook server with:
